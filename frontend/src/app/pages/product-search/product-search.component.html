@@ -1,0 +1,42 @@
+<div class="container my-5">
+    <h2 class="text-center mb-4">Exclusive Tech Collections</h2>
+    <p class="text-center text-muted">
+        Explore cutting-edge technology with premium drones, high-quality electronics components, and custom-designed 3D printing models, brought to you by our team of experts.
+    </p>
+
+    <!-- Sorting Dropdown -->
+    <div class="d-flex justify-content-end mb-3">
+        <select class="form-select w-auto" (change)="onSortChange($event)">
+            <option value="">Sort by</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="name_asc">Name: A to Z</option>
+            <option value="name_desc">Name: Z to A</option>
+        </select>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4 col-lg-3" *ngFor="let product of sortedProducts">
+            <a href="products/{{ product.id }}">
+                <div class="card mb-4 shadow-sm position-relative product-card">
+                    <img [src]="product.images[0]" class="card-img-top" [alt]="product.name" />
+                    <div class="hover-overlay d-none position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+                        <button class="btn btn-outline-dark me-2"><i class="fas fa-shopping-cart"></i> Cart</button>
+                        <button class="btn btn-outline-dark"><i class="fas fa-heart"></i> Wishlist</button>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text">Rs. {{ product.price }}</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+
+<div *ngIf="products.length === 0 && keyword" class="d-flex flex-column align-items-center m-4 justify-content-center">
+    <div>
+        <h2 class="text-align border font-size">No products found for "{{ keyword }}"</h2>
+    </div>
+    <img src="assets/images/404.svg" class="img-card" alt="">
+</div>

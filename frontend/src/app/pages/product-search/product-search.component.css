@@ -1,0 +1,62 @@
+.img-card{
+    width: 30rem;
+    height: auto;
+}
+
+  .card-body h5{
+    font-size: 14px;
+  }
+
+  .card {
+    position: relative;
+    overflow: hidden; /* Ensures overlay stays within the card */
+    border-radius: 8px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Image Styling */
+  .card img {
+    width: 100%;
+    /* height: 35vh; */
+    /* min-height: 56vh; */
+    max-height: 56vh;
+    transition: transform 0.3s ease; /* Smooth transition for hover scaling */
+    display: block;
+  }
+  
+  /* Overlay Styling */
+  .hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgba(0, 0, 0, 0.6);  */
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden initially */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* Title and Button Styling */
+  .hover-overlay button {
+    margin-right: 1rem;
+  }
+  
+  /* Hover Effects */
+  .card:hover {
+    transform: scale(1.05); /* Enlarges the entire card */
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);  */
+  }
+  
+  .card:hover img {
+    transform: scale(1.1); /* Enlarges the image inside the card */
+  }
+  
+  .card:hover .hover-overlay {
+    opacity: 1; /* Shows the overlay on hover */
+  }
+  

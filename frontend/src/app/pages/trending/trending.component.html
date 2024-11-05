@@ -1,0 +1,25 @@
+<!-- //////////// cards ////////// -->
+<div class="container text-center my-5">  
+    <h2 class="font-weight-bold mb-5">TRENDING NOW</h2>  
+    <div class="row ">  
+
+        <div class="col-md-3 mb-4" *ngFor="let product of topSoldProducts">  
+            <a href="products/{{product.id}}">
+
+            
+            <div class="card border text-center card-hover">  
+                <div class="position-relative">  
+                    <img [src]="product.images[0]" class="card-img-top" [alt]="product.name">  
+                    <div class="overlay ">  
+                        <p class="text-muted">{{ product.description }}</p>  
+                        <h5 class="font-weight-bold">{{ product.name }}</h5>  
+                        <p class="font-weight-bold">$ {{ product.price }}</p>  
+                    
+                    </div>  
+                </div>  
+            </div>  
+        </a>
+        </div>  
+
+    </div>  
+</div>

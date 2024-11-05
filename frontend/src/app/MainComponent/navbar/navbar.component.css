@@ -1,0 +1,60 @@
+.nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0; 
+    visibility: visible;
+    opacity: 1;
+  }
+  *{
+    text-decoration: none;
+    list-style: none;
+  }
+  .nav-item.dropdown:hover .catalog{
+    display: flex;
+  }
+ 
+  .dropdown-item:hover{
+    background-color: #186f34;
+    color: white;
+  }
+  .catalog-menu{
+    width: 80vw;
+  }
+  
+#catalogDropdownMenu{
+  width: 80vw;
+}
+  .collapse {
+    display: none;
+  }
+  
+  .collapse.show {
+    display: block;
+  }
+  .show{
+   display: flex;
+  }
+  .dropdown-menu {
+    display: none;
+  }
+  
+  .dropdown-menu.show {
+    display: flex;
+  }
+  
+  .nav-item:hover{
+    border-bottom: 2px solid #186f34;
+    
+  }
+
+  @media (max-width:720px) {
+    .dropdown-menu .d-flex{
+      padding: 0px;
+      font-Size:10px;
+     }
+     .exploremore{
+      display: none;
+     }
+     #catalogDropdownMenu{
+      width: auto;
+     }
+  }

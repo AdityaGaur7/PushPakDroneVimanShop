@@ -1,0 +1,123 @@
+<app-routeshow [item]="currentItem"></app-routeshow>
+<div class="container text-center my-5">  
+    <div class="row align-items-center">  
+      <div class="col-md-6">  
+        <h1 class="display-4">INNOVATE, CREATE, ELEVATE</h1>  
+        <p class="lead">  
+          Explore the world of cutting-edge drones, advanced electronics, and 3D printing models. Whether you're a hobbyist or a professional, we have the latest tech to bring your ideas to life. From high-performance drones to customizable 3D printed products, transform your creative visions into reality.
+        </p>
+      </div>  
+      <div class="col-md-6">  
+        <img src="../../../assets/images/quadrocopter.png" class="img-fluid" alt="Innovative Tech Image">  
+      </div>  
+    </div>  
+</div>  
+
+<!-- ////////////////////////////////////////////// -->
+
+<div class="container text-center my-5 border">  
+  <h1 class="mb-4">REVOLUTIONARY TECH SOLUTIONS</h1>  
+  <h5 class="mb-5">FOR YOUR CREATIVE JOURNEY</h5>  
+  
+  <div class="row">  
+    <div class="col-md-4">  
+      <div class="card mb-4">  
+        <div class="card-body">  
+          <h5 class="card-title">NEXT-GEN DRONES</h5>  
+          <p class="card-text">Take to the skies with precision control, high-quality cameras, and long-lasting battery life. Whether for photography or exploration, our drones offer the best aerial experience.</p>  
+        </div>  
+      </div>  
+    </div>  
+    
+    <div class="col-md-4">  
+      <div class="card mb-4">  
+        <div class="card-body">  
+          <h5 class="card-title">SMART ELECTRONICS</h5>  
+          <p class="card-text">Upgrade your tech setup with smart gadgets that enhance productivity, entertainment, and connectivity. Explore a range of products that combine innovation with practicality.</p>  
+        </div>  
+      </div>  
+    </div>  
+    
+    <div class="col-md-4">  
+      <div class="card mb-4">  
+        <div class="card-body">  
+          <h5 class="card-title">3D PRINTING EXCELLENCE</h5>  
+          <p class="card-text">Bring your designs to life with our top-tier 3D printers. From prototypes to fully functional models, our products offer unparalleled quality and precision in 3D printing.</p>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+  
+  <h5 class="mt-5">24-MONTH WARRANTY ON TECH PRODUCTS</h5>  
+  <p>Quality and reliability guaranteed. Discover advanced electronics and drones backed by extended warranties.</p>  
+</div>
+
+<!-- <app-cardssection></app-cardssection> -->
+
+<!-- ////////////////////////////// -->
+
+<div class="container text-center my-5 ">  
+  <h1 class="display-4">CUSTOMIZED TECH SOLUTIONS</h1>  
+  <p class="lead">Tailored for Your Needs</p>  
+  
+  <div class="row align-items-center border m-2">  
+    <div class="col-md-6">  
+      <img src="../../../assets/images/prod1.jpg" class="img-fluid rounded" alt="Customized Drone">  
+    </div>  
+    <div class="col-md-6">  
+      <h2>HIGH-PRECISION DRONES</h2>  
+      <p>Our customizable drones offer cutting-edge technology and superior flight performance, ensuring accurate control and enhanced aerial photography capabilities.</p>  
+    </div>  
+  </div>  
+
+  <div class="row align-items-center border m-2">  
+    <div class="col-md-6">  
+      <h2>INNOVATIVE ELECTRONIC SOLUTIONS</h2>  
+      <p>Get your hands on electronics designed to make life easier, smarter, and more connected. Whether it's for your home, office, or creative projects, we have the perfect solution.</p>  
+    </div>  
+    <div class="col-md-6">  
+      <img src="../../../assets/images/capacitors.jpg" class="img-fluid rounded" alt="Customized Electronics">  
+    </div>  
+  </div>  
+</div>  
+
+<!-- /////////////////// video ////////////////// -->
+
+<div class="container my-5">
+  <div class="row align-items-center">
+      <div class="col-md-6">
+          <img src="../../../assets/images/boats.jpg" alt="Custom 3D Printing" class="img-fluid rounded " />
+      </div>
+      <div class="col-md-6">
+          <h2>Custom 3D Printing Models</h2>
+          <p>
+              Discover our range of 3D printing services tailored to your needs. Whether you're building prototypes or final products, our 3D printers provide industry-leading accuracy and precision.
+          </p>
+
+          <i class="fa fa-play"></i>
+          <a href="#" class="videobtn">VIEW OUR VIDEO</a>
+      </div>
+  </div>
+</div>
+
+<div class="container my-5 team">  
+  <h2 class="text-center">Innovators Behind Our Success</h2>  
+  <p class="text-center">Our team of experts specializes in drones, electronics components, and 3D printing models. Together, we create top-tier products and solutions for tech enthusiasts.</p>  
+  <div class="row">  
+    <div class="col-md-4" *ngFor="let member of teamMembers">  
+      <div class="card text-center mb-4 position-relative">  
+        <img src="{{ member.image }}" class="card-img-top" alt="{{ member.name }}">  
+        <div class="card-body">  
+          <h5 class="card-title">{{ member.name }}</h5>  
+          <p class="card-text">{{ member.role }}</p>  
+        </div>  
+        <div class="social-icons">  
+          <a href="{{ member.social.facebook }}" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>  
+          <a href="{{ member.social.twitter }}" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>  
+          <a href="{{ member.social.pinterest }}" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+          <a href="{{ member.social.instagram }}" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>

@@ -1,0 +1,74 @@
+.hero-container {
+    /* background-color: #ff7070; */
+    /* background:url('../../../assets/images/bg2.jpg'); */
+    padding: 20vh 0;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+ 
+  .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .hero-image-left, .hero-image-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  
+ .hero-image-right img {
+    width: 100%;
+    height: auto;
+  }
+  .hero-image-left img {
+    width: 60%;
+    height: auto;
+    text-align: center;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+  }
+  .hero-image-left img:hover {
+    animation: moveUpDown 1s ease-in-out infinite; /* Animation duration and smoothness */
+    cursor: pointer;
+  }
+  
+  
+  /* Define the animation for up and down movement */
+  @keyframes moveUpDown {
+    0%, 100% {
+      transform: translateY(0); /* Start and end at original position */
+    }
+    50% {
+      transform: translateY(-25px); /* Move up by 2px at midpoint */
+    }
+  }
+  
+  /* Apply the animation on hover */
+ 
+  .hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #000;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .hero-text h3 {
+    font-size: 24px;
+    margin: 0;
+    color:#ab12b3;
+  }
+  
+  .hero-text p {
+    margin: 0;
+    color: #000;
+    font-size: 18px;
+  }
+  
+  .hero-image-right img {
+    border-radius: 5px;
+  }
+  

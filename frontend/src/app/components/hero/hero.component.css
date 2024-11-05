@@ -1,0 +1,22 @@
+.card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    text-align: left;
+    position: absolute;
+  }
+  
+  .btn {
+    margin-top: 10px;
+  }
+  .container-fluid a{
+    text-decoration: none;
+  }
+  .card-title{
+    color: white;
+    text-decoration: none;
+ 
+    text-shadow: 1px 2px 2px black;
+  }

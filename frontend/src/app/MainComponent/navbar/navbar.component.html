@@ -1,0 +1,106 @@
+<!-- Navbar -->
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="../../../assets/images/pushpaklogo.png" style="width: auto; height:5rem;" alt="Pushpakdroneviman Logo">
+    </a>
+    <button class="navbar-toggler" type="button" (click)="toggleNavbar()">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+        <!-- Catalog Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="catalogDropdown" role="button" (click)="toggleDropdown('catalogDropdown')">
+            Catalog
+          </a>
+          <ul class="dropdown-menu" id="catalogDropdownMenu">
+            <ul class="d-flex">
+              <li>
+                <h6 class="dropdown-header">DRONE</h6>
+                <ul class="list-unstyled">
+                  <li><a class="dropdown-item" href="/search/agriculture-drone">Agriculture Drone</a></li>
+                  <li><a class="dropdown-item" href="/search/videography">Videography Drone</a></li>
+                  <li><a class="dropdown-item" href="/search/mapping">Mapping Drone</a></li>
+                  <li><a class="dropdown-item" href="/search/Dronekit">Drone Kit</a></li>
+                 
+                </ul>
+              </li>
+              <li>
+                <h6 class="dropdown-header">3D-MODELS</h6>
+                <ul class="list-unstyled">
+                  <li><a class="dropdown-item" href="/search/customised">Customised objects</a></li>
+                  <li><a class="dropdown-item" href="/search/lithographic">Lithographic 3D Printing</a></li>
+                  <li><a class="dropdown-item" href="/search/3Dobjects">3D printed objects</a></li>
+                  <li><a class="dropdown-item" href="/search/educationaltools">EducationalTools</a></li>
+                
+                </ul>
+              </li>
+              <li>
+                <h6 class="dropdown-header">INTERNET OF THINGS (IOT) 
+                </h6>
+                <ul class="list-unstyled">
+                  <li><a class="dropdown-item" href="/search/microcontroller">Microcontroller</a></li>
+                  <li><a class="dropdown-item" href="/search/microcomputer">Microcomputer</a></li>
+                  <li><a class="dropdown-item" href="/search/soldering">Soldering Kits</a></li>
+                  <li><a class="dropdown-item" href="/search/Iotkit">IOT Based Kit</a></li>
+                </ul>
+              </li>
+            
+              <!-- Image with text -->
+              <li class="exploremore">
+                <a href="/searchall" class="d-flex align-items-center">
+                  <img src="../../../assets/images/controller.jpg" alt="Catalog Image" class="img-fluid" style="width: 20rem; height: auto;">
+                  <span class="ms-2">Explore More</span>
+                </a>
+              </li>
+            </ul>
+          </ul>
+        </li>
+
+        <!-- Pages Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" (click)="toggleDropdown('pagesDropdown')">
+            Pages
+          </a>
+          <ul class="dropdown-menu" id="pagesDropdownMenu">
+            <!-- <li><a class="dropdown-item" href="/about">About</a></li> -->
+            <li><a class="dropdown-item" href="/services">About</a></li>
+            <!-- <li><a class="dropdown-item" href="/news">Blogs</a></li> -->
+            <li><a class="dropdown-item" href="/faq">FAQ</a></li>
+            <!-- <li><a class="dropdown-item" href="/contact">Contact</a></li> -->
+            <li *ngIf="isadmin"><a class="dropdown-item" href="/dashboard">Admin</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/searchall">All Products</a>
+        </li>
+        <!-- Profile Icon with Dropdown -->
+        @if (loggedin) {
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#"  id="profileDropdown" role="button" (click)="toggleDropdown('profileDropdown')">
+            <img [src]="loggedin.image" width="auto" height="25rem" style="border-radius:50%" alt=""> {{loggedin.username}}
+          </a>
+          <ul class="dropdown-menu" id="profileDropdownMenu">
+            <li><a class="dropdown-item" href="/profile">Profile</a></li>
+            <li><a class="dropdown-item" (click)="logout()">Logout</a></li>
+          </ul>
+        </li>
+        }
+        @else {
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        }
+      </ul>
+    </div>
+  </div>
+</nav>
+

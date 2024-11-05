@@ -1,0 +1,26 @@
+.tab-content {  
+    margin-top: 20px;  
+}  
+.inquiry-section {  
+    margin-top: 40px;  
+    padding: 20px;  
+    border: 1px solid #ccc;  
+    border-radius: 5px;  
+}  
+.mt-3 button:hover{
+    background-color: #ab12b3;
+}
+.product_img{
+    width: -webkit-fill-available;
+    height: 50%;
+    width: 50%;
+   text-align: center;
+   margin: auto;
+}
+.picsum-img-wrapper{
+    text-align: center;
+    border: 1px solid black;
+}
+.carousel-control-next-icon{
+    filter: invert(1);
+}

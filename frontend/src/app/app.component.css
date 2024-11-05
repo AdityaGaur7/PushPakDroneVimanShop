@@ -1,0 +1,23 @@
+.hello{
+    color: red;
+}
+.btn-custom {
+    background-color: #ab12b3;
+    border-color: #ab12b3;
+    color: white; /* Adjust text color if needed */
+}
+
+.btn-custom:hover {
+    background-color: #d11b6e;
+    border-color: #d11b6e;
+}
+.custom-pink {
+    background-color: #ab12b3;
+    color: white; /* Adjust text color if needed */
+}
+.purple{
+    color: #680747;
+}
+.drk-pink{
+    color: #c3195d;
+}

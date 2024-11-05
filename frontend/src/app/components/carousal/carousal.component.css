@@ -1,0 +1,209 @@
+/* Global Styles */
+.cont {
+  background-color: #000; /* Set background color to black */
+  width: 100%;
+}
+
+h6, p {
+  margin: 0;
+}
+
+i {
+  color: white;
+}
+
+
+
+
+/* Carousel Caption Adjustments */
+.carousel-caption {
+  text-align: left;
+  left: 10%;
+  right: 10%;
+  padding: 20px;
+  /* background-color: rgba(0, 0, 0, 0.5);  */
+}
+
+@media (max-width: 412px) {
+  h2 {
+      font-size: 1.5rem; /* Smaller font size for headers */
+  }
+
+  h5 {
+      font-size: 1rem; /* Smaller font size for subheaders */
+  }
+
+  .btn {
+      font-size: 0.9rem; /* Smaller font size for buttons */
+      padding: 6px 12px; /* Adjusted padding for smaller screens */
+  }
+.flex-md-row{
+  flex-direction: row;
+}
+  .carousel-caption {
+      left: 5%;
+      right: 5%;
+      padding: 10px;
+      width: fit-content;
+      /* background: none; */
+  }
+ .carousal{
+  height: fit-content;
+ }
+  .icon-container i {
+      font-size: 20px; /* Smaller icon size */
+  }
+  .flex-md-row , .mb-3{
+    width: 50%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+  }
+}
+.btn-custom {
+  background-color: #d11b6e;
+  border-color: #ffffff;
+  color: white; /* Adjust text color if needed */
+}
+
+.btn-custom:hover {
+  background-color: #736f6f;
+  border-color: #fdfafc;
+}
+.custom-pink {
+  background-color: #ab12b3;
+  color: white; /* Adjust text color if needed */
+}
+
+/* From Uiverse.io by e-coders */ 
+.btny {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #18181a;
+  color: #18181a;
+  display: inline-block;
+  font-size: 15px;
+  line-height: 15px;
+  padding:18px 18px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  background: #fff;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+ }
+ 
+ .btny span:first-child {
+  position: relative;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 10;
+ }
+ 
+ .btny span:last-child {
+  color: white;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
+  opacity: 0;
+  top: 50%;
+  left: 50%;
+  transform: translateY(225%) translateX(-50%);
+  height: 14px;
+  line-height: 13px;
+ }
+ 
+ .btny:after {
+  content: "";
+  position: absolute;
+  bottom: -50%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ab12b3;
+ 
+  transform-origin: bottom center;
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
+  transform: skewY(9.3deg) scaleY(0);
+  z-index: 50;
+ }
+ 
+ .btny:hover:after {
+  transform-origin: bottom center;
+  transform: skewY(9.3deg) scaleY(2);
+ }
+ 
+ .btny:hover span:last-child {
+  transform: translateX(-50%) translateY(-50%);
+  opacity: 1;
+  transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+ }
+
+
+.col-md-3{
+  cursor: pointer;
+}
+.display-4{
+  color: #ab12b3;
+  font-weight: 400;
+}
+/* Styling for the section */
+.bg-dark.text-white {
+  position: relative;
+  overflow: hidden; /* Ensures that animations do not overflow */
+  padding: 3rem 1.5rem; /* Adjust padding for better spacing */
+  margin: 2rem 0; /* Margin for spacing around the section */
+
+  background: linear-gradient(145deg, #343a40, #323232); /* Gradient background */
+}
+
+/* Heading styling */
+.bg-dark.text-white h1 {
+  font-size: 3rem; /* Adjust font size */
+  margin-bottom: 1.5rem; /* Space below the heading */
+  font-weight: 700; /* Bold font */
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Styling for the emphasized part of the heading */
+.bg-dark.text-white h1 span {
+  font-size: 3.2rem; /* Slightly larger for emphasis */
+  color: #f8f9fa; /* Light color for emphasis */
+  position: relative;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Animation effect on hover for the heading */
+.bg-dark.text-white h1:hover {
+  transform: translateY(-5px); /* Subtle lift effect */
+}
+
+/* Styling for the paragraph */
+.bg-dark.text-white p {
+  font-size: 1.25rem; /* Adjust font size for readability */
+  margin-bottom: 1.5rem; /* Space below the paragraph */
+  color: #e9ecef; /* Slightly lighter color for the text */
+}
+
+/* Styling for the button */
+.bg-dark.text-white .btn-light {
+  background-color: #ffffff; /* White background for the button */
+  color: #343a40; /* Dark text for the button */
+  border: none; /* Remove default border */
+  padding: 0.75rem 1.5rem; /* Adjust padding for better size */
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1.125rem; /* Larger font size */
+  font-weight: 600; /* Bold font */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the button */
+.bg-dark.text-white .btn-light:hover {
+  background-color: #f8f9fa; /* Light gray background */
+  color: #343a40; /* Dark text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  transform: translateY(-3px); /* Lift effect on hover */
+}

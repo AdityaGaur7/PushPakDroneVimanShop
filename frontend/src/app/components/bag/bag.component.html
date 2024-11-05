@@ -1,0 +1,35 @@
+<div class="container mt-5 p-5" *ngIf="product">
+  <div class="row">
+    <!-- Product Image Carousel -->
+    <div class="col-md-6">
+      <ngb-carousel
+        [showNavigationArrows]="showNavigationArrows"
+        [showNavigationIndicators]="showNavigationIndicators"
+      >
+        <ng-template ngbSlide *ngFor="let image of images">
+          <div class="picsum-img-wrapper ">
+            <img [src]="image" alt="Random slide" class="product_img"/>
+          </div>
+          <!-- <div class="carousel-caption">
+            <h3>No mouse navigation</h3>
+            <p>This carousel hides navigation arrows and indicators.</p>
+          </div> -->
+        </ng-template>
+      </ngb-carousel>
+    
+    </div>
+
+    <!-- Product Details -->
+    <div class="col-md-6 d-flex justify-content-center flex-column">
+      <h2 class="font-weight-bold">{{ product.name }}</h2>
+      <p class="h4">Price: <span class="font-weight-bold">${{ product.price }}</span></p>
+      <h6>Vendor: <span class="font-weight-bold">Pushpakvimandrone</span></h6>
+      <h6>Type: <span class="font-weight-bold">{{ product.category }}</span></h6>
+      <h6>Availability: <span class="text-success font-weight-bold">{{ product.stock }}</span></h6>
+      <h6>Description: <span class="text-success font-weight-bold">{{ product.description }}</span></h6>
+      <div class="mt-3">
+        <button type="button" class="btn btn-outline-dark" (click)="buyProduct()">BUY</button>
+      </div>
+    </div>
+  </div>
+</div>

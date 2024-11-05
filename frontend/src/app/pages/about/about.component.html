@@ -1,0 +1,84 @@
+<app-routeshow [item]="currentItem"></app-routeshow>
+
+<!-- <app-carousal></app-carousal> -->
+
+<div class="container mt-5 h-50">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="../../../assets/images/drone-flying.jpg" alt="Drone Image">
+        <div class="overlay">
+          <h5 class="title">INNOVATIVE TECHNOLOGY</h5>
+          <h3 class="subtitle">DRONES</h3>
+          <p class="description">Explore the latest in drone technology, perfect for aerial photography, videography, and surveillance, providing cutting-edge features with powerful performance.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="../../../assets/images/microchips.jpg" alt="Electronics Image">
+        <div class="overlay">
+          <h5 class="title">TOP-GRADE QUALITY</h5>
+          <h3 class="subtitle">ELECTRONICS COMPONENTS</h3>
+          <p class="description">Our wide range of electronic components is ideal for building circuits, repairing gadgets, or crafting your next big tech project with industry-standard quality.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="image-container">
+        <img src="../../../assets/images/3dprinting.jpg" alt="3D Printing Models Image">
+        <div class="overlay">
+          <h5 class="title">CREATIVE INNOVATION</h5>
+          <h3 class="subtitle">3D PRINTING MODELS</h3>
+          <p class="description">Discover a variety of 3D printing models for your projects, including customizable designs and high-precision materials suitable for both beginners and professionals.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container text-center my-5 border p-4">  
+  <h2 class="mb-4">Shop by Category</h2>  
+  <div class="row">  
+    <div class="col-md-4">  
+      <a href="../search/drones">
+        <img src="../../../assets/images/drone-flying.jpg" class="img-fluid category-item" alt="Drones">
+      </a>
+      <h5 class="mt-2">Drones</h5>
+    </div>
+    <div class="col-md-4">  
+      <a href="../search/electronics-components">
+        <img src="../../../assets/images/drone-flying.jpg" class="img-fluid category-item" alt="Electronics Components">
+      </a>
+      <h5 class="mt-2">Electronics Components</h5>
+    </div>
+    <div class="col-md-4">  
+      <a href="../search/3d-printing-models">
+        <img src="../../../assets/images/drone-flying.jpg" class="img-fluid category-item" alt="3D Printing Models">
+      </a>
+      <h5 class="mt-2">3D Printing Models</h5>
+    </div>  
+  </div>  
+</div>   -->
+
+<div class="container my-5 team">  
+  <h2 class="text-center">Innovators Behind Our Success</h2>  
+  <p class="text-center">Our team of experts specializes in drones, electronics components, and 3D printing models. Together, we create top-tier products and solutions for tech enthusiasts.</p>  
+  <div class="row">  
+    <div class="col-md-4" *ngFor="let member of teamMembers">  
+      <div class="card text-center mb-4 position-relative">  
+        <img src="{{ member.image }}" class="card-img-top" alt="{{ member.name }}">  
+        <div class="card-body">  
+          <h5 class="card-title">{{ member.name }}</h5>  
+          <p class="card-text">{{ member.role }}</p>  
+        </div>  
+        <div class="social-icons">  
+          <a href="{{ member.social.facebook }}" class="social-icon" target="_blank"><i class="fab fa-facebook-f"></i></a>  
+          <a href="{{ member.social.twitter }}" class="social-icon" target="_blank"><i class="fab fa-twitter"></i></a>  
+          <a href="{{ member.social.pinterest }}" class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>  
+          <a href="{{ member.social.instagram }}" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>  
+        </div>  
+      </div>  
+    </div>  
+  </div>  
+</div>

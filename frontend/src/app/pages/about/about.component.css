@@ -1,0 +1,83 @@
+/* Container Styling */
+
+
+.team{
+    /* padding: 5px 15rem; */
+}
+
+.card {  
+    border: none;  
+    position: relative;  
+    display: block;
+    overflow: hidden; /* Ensure icons are hidden initially */  
+  }  
+  
+  .card-img-top {  
+    border-radius: 50%; /* Make images circular */  
+    width: 150px; /* Set a fixed width */  
+    height: 150px; /* Set a fixed height */  
+    object-fit: cover; /* Cover the area */  
+  }  
+  
+  .social-icons {  
+    position: absolute;  
+    top: 50%;  
+    right: -60px; /* Position off-screen initially */  
+    transform: translateY(-50%);  
+    opacity: 0; /* Hide initially */  
+    transition: all 0.3s ease; /* Smooth transition */  
+  }  
+  
+  .card:hover .social-icons {  
+    right: 10px; /* Move into view on hover */  
+    opacity: 1; /* Show icons on hover */  
+  }  
+  
+  .social-icon {  
+    display: block;  
+    margin: 5px 0;  
+    color: #333; /* Icon color */  
+    font-size: 20px; /* Icon size */  
+    transition: color 0.3s ease; /* Smooth color transition */  
+  }  
+  
+  .social-icon:hover {  
+    color: #ab12b3; /* Change color on hover */  
+  }
+  .overlay h5 , .overlay h3{
+    color:#ab12b3 ;
+  }
+ 
+  /* ////////////////////////////////////// */
+
+
+  
+
+ /* Container for the category items */
+.category-item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect: move the item up and add a shadow */
+.category-item:hover {
+  transform: translateY(-10px); /* Move up by 10px */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Add a soft shadow */
+}
+
+/* Ensure the image is fully responsive and fits within the category item */
+.category-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional: Add some rounded corners */
+}
+
+/* Add a bit of spacing between image and text */
+.category-item h5 {
+  margin-top: 10px;
+  transition: color 0.3s ease;
+}
+
+/* Optional: Change the text color on hover */
+.category-item:hover h5 {
+  color: #007bff; /* Change to a subtle blue color on hover */
+}

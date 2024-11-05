@@ -1,0 +1,75 @@
+.container {
+    margin-top: 5rem; /* Adds top margin */
+    padding: 2rem; /* Adds padding to the container */
+}
+
+/* Image Container Styling */
+.image-container {
+    position: relative;
+    overflow: hidden; /* Ensures the overlay does not overflow */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Image Styling */
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block; /* Ensures images do not have extra space below */
+    transition: transform 0.3s ease; /* Smooth transition for scaling effect */
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay with opacity */
+    color: #fff; /* White text color */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for fade-in effect */
+    text-align: center;
+    padding: 1rem; /* Padding inside the overlay */
+    border-radius: 8px; /* Rounded corners for the overlay */
+}
+
+/* Title and Subtitle Styling */
+.overlay .title {
+    font-size: 1.25rem; /* Title font size */
+    margin-bottom: 0.5rem; /* Space below the title */
+    font-weight: bold; /* Bold text */
+ 
+
+}
+
+.overlay .subtitle {
+       color: #51da7c;
+    font-size: 1.75rem; /* Subtitle font size */
+    margin-bottom: 1rem; /* Space below the subtitle */
+    font-weight: bold; /* Bold text */
+}
+
+.overlay .description {
+    font-size: 1rem; /* Description font size */
+}
+
+/* Hover Effects */
+.image-container:hover {
+    transform: scale(1.05); /* Slightly enlarges the image container */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Increases shadow on hover */
+}
+
+.image-container:hover img {
+    transform: scale(1.1); /* Slightly enlarges the image */
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Shows the overlay on hover */
+}
