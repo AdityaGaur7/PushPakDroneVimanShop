@@ -10,20 +10,20 @@ import { CommonModule } from '@angular/common';
   templateUrl: './trending.component.html',
   styleUrl: './trending.component.css'
 })
-export class TrendingComponent implements OnInit{
-  topSoldProducts: Product[] = [];
+export class TrendingComponent {
+  // topSoldProducts: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  // constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {
-    this.fetchTopSoldProducts();
-  }
+  // ngOnInit(): void {
+  //   this.fetchTopSoldProducts();
+  // }
 
-  fetchTopSoldProducts(): void {
-    this.productService.getTop4SoldProducts().subscribe((products: Product[]) => {
-      this.topSoldProducts = products.slice(0, 16);
-      console.log(this.topSoldProducts);
+  // fetchTopSoldProducts(): void {
+  //   this.productService.getTop4SoldProducts().subscribe((products: Product[]) => {
+  //     this.topSoldProducts = products.slice(0, 16);
+  //     console.log(this.topSoldProducts);
       
-    });
-  }
+  //   });
+  // }
 }

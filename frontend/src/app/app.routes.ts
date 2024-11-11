@@ -19,7 +19,7 @@ import { UsereditComponent } from './pages/useredit/useredit.component';
 import {  AuthGuard } from './guard/auth.guard';
 import { ErrorComponent } from './error/error.component';
 import { AdminGuard } from './guard/admin.guard';
-import { TrendingComponent } from './pages/trending/trending.component';
+// import { TrendingComponent } from './pages/trending/trending.component';
 import { CarousalComponent } from './components/carousal/carousal.component';
 
 // import { ProductFormComponent } from './product-form/product-form.component';
@@ -37,7 +37,7 @@ export const routes: Routes = [
   { path: 'dashboard', title: "Dashboard", component: DashboardComponent },
   { path: 'edit/:id', title: "Product Edit", component: ProductEditComponent },
   { path: 'profile', title: "Profile", component: ProfileComponent },
-  { path: 'trending', title: "Trending", component: TrendingComponent },
+  // { path: 'trending', title: "Trending", component: TrendingComponent },
   { path: 'search/:id', title: "Product Search", component: ProductSearchComponent },
   { path: 'searchall', title: "Product all Search", component: SearchallComponent },
   { path: 'edituser/:id', title: "User Edit", component: UsereditComponent },

@@ -2,8 +2,8 @@
 
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map, catchError } from 'rxjs/operators';
 import { Product } from '../model/product';
 import { LocalStorageService } from './localstorage.service'; // Import LocalStorageService
 
@@ -86,10 +86,18 @@ export class ProductService {
   }
 
   // Get top 4 sold products
-  getTop4SoldProducts(): Observable<Product[]> {
-    const headers = this.getHeaders();
-    return this.http.get<Product[]>(`${this.apiUrl}/topsold`, { headers }).pipe(
-      map(products => products.map(product => this.transformId(product)))
-    );
-  }
+  // getTop4SoldProducts(): Observable<Product[]> {
+  //   const headers = this.getHeaders();
+  //   return this.http.get<Product[]>(`${this.apiUrl}/topsold`, { headers }).pipe(
+  //     // If you're processing or transforming the products' data
+  //     map(products => {
+  //       // Map through the array and transform each product
+  //       return products.map(product => this.transformId(product));
+  //     }),
+  //     catchError(error => {
+  //       console.error('Error fetching top sold products:', error);
+  //       return of([]); // Return an empty array on error
+  //     })
+  //   );
+  // }
 }

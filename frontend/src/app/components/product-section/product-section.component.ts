@@ -11,7 +11,7 @@ import { Product } from '../../model/product';
   templateUrl: './product-section.component.html',
   styleUrl: './product-section.component.css'
 })
-export class ProductSectionComponent implements OnInit {
+export class ProductSectionComponent {
   products :any= [
     {
       name: 'Walnut Leather Bag',
@@ -67,14 +67,14 @@ export class ProductSectionComponent implements OnInit {
 
   constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {
-    this.fetchTrendingProducts();
-  }
+  // ngOnInit(): void {
+  //   this.fetchTrendingProducts();
+  // }
 
-  fetchTrendingProducts(): void {
-    this.productService.getTop4SoldProducts().subscribe((products: Product[]) => {
-      this.trendingProducts = products.slice(4, 12);
-    });
-  }
+  // fetchTrendingProducts(): void {
+  //   this.productService.getTop4SoldProducts().subscribe((products: Product[]) => {
+  //     this.trendingProducts = products.slice(4, 12);
+  //   });
+  // }
   
 }

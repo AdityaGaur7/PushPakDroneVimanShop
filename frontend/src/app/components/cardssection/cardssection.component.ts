@@ -12,20 +12,20 @@ import { log } from 'console';
   templateUrl: './cardssection.component.html',
   styleUrl: './cardssection.component.css'
 })
-export class CardssectionComponent implements OnInit {
+export class CardssectionComponent {
   topSoldProducts: Product[] = [];
 
   constructor(private productService: ProductService) {}
 
-  ngOnInit(): void {
-    this.fetchTopSoldProducts();
-  }
+  // ngOnInit(): void {
+  //   this.fetchTopSoldProducts();
+  // }
 
-  fetchTopSoldProducts(): void {
-    this.productService.getTop4SoldProducts().subscribe((products: Product[]) => {
-      this.topSoldProducts = products.slice(0, 4);
-      // console.log(this.topSoldProducts);
+  // fetchTopSoldProducts(): void {
+  //   this.productService.getTop4SoldProducts().subscribe((products: Product[]) => {
+  //     this.topSoldProducts = products.slice(0, 4);
+  //     // console.log(this.topSoldProducts);
       
-    });
-  }
+  //   });
+  // }
 }

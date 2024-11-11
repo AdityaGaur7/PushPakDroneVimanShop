@@ -9,6 +9,6 @@ router.get('/:id', getProduct);
 router.put('/:id', authenticate, updateProduct);
 router.delete('/:id', authenticate, deleteProduct);
 router.get('/search/:keyword', searchProducts);
-router.get('/topsold', getTop4SoldProducts);
+// router.get('/topsold', getTop4SoldProducts);
 
 module.exports = router;
