@@ -9,7 +9,7 @@ import { LocalStorageService } from './localstorage.service';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl = 'http://localhost:8080/api/users'; // Replace with your actual API URL
+  private baseUrl = 'https://pushpakdronevimanshopbackend.onrender.com/api/users'; // Replace with your actual API URL
 
   constructor(
     private http: HttpClient,
