@@ -11,7 +11,9 @@ import { LocalStorageService } from './localstorage.service'; // Import LocalSto
   providedIn: 'root'
 })
 export class ProductService {
-  apiUrl = 'https://pushpakdronevimanshopbackend.onrender.com/api/products'; // Adjust the URL to your API
+  // apiUrl = 'https://pushpakdronevimanshopbackend.onrender.com/api/products'; // Adjust the URL to your API
+  // apiUrl = 'http://localhost:8000/api/products'; // Adjust the URL to your API
+  apiUrl = 'https://pushpakdronevimanshopbackend.vercel.app/api/products'; // Adjust the URL to your API
 
   constructor(
     private http: HttpClient,

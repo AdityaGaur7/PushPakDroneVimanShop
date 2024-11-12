@@ -19,7 +19,7 @@
 }
 .picsum-img-wrapper{
     text-align: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .carousel-control-next-icon{
     filter: invert(1);
