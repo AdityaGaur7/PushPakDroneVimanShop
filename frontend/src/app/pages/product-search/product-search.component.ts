@@ -33,6 +33,8 @@ export class ProductSearchComponent implements OnInit {
       this.productService.searchProducts(this.keyword).subscribe(
         (data: Product[]) => {
           this.products = data;
+          console.log('Products:', this.products);
+          
           this.sortedProducts = [...this.products];  // Initialize with unsorted products
         },
         (error) => {

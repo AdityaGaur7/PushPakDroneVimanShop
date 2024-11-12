@@ -1,44 +1,61 @@
 <div class=" w-100 text-center d-flex justify-content-center align-items-center">
 
     <div class="input-container">
-        <form  [formGroup]="searchForm" (ngSubmit)="search()">
+        <form [formGroup]="searchForm" (ngSubmit)="search()">
             <input type="text" name="text" class="input" formControlName="keyword" placeholder="search...">
-            <button class="icon" type="submit"> 
-                <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2" stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path> <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+            <button class="icon" type="submit">
+                <svg width="19px" height="19px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path opacity="1" d="M14 5H20" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path opacity="1" d="M14 8H17" stroke="#000" stroke-width="1.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                        <path d="M21 11.5C21 16.75 16.75 21 11.5 21C6.25 21 2 16.75 2 11.5C2 6.25 6.25 2 11.5 2"
+                            stroke="#000" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path opacity="1" d="M22 22L20 20" stroke="#000" stroke-width="3.5" stroke-linecap="round"
+                            stroke-linejoin="round"></path>
+                    </g>
+                </svg>
             </button>
         </form>
     </div>
-    
+
 </div>
 
 
 
 
-  <!-- /////////////////////////////////////////////////////////////////// -->
-   
+<!-- /////////////////////////////////////////////////////////////////// -->
+
 
 <div class="container my-5">
-   
-    <div class="row">
-        <div class="col-md-4 col-lg-3" *ngFor="let product of products">
-            <a href="products/{{ product.id }}">
-                <div class="card mb-4 shadow-sm position-relative product-card">
+
+    <div class="row g-4">
+        <div class="col-md-4 col-lg-4" *ngFor="let product of products">
+            <div class="card mb-3 shadow-sm position-relative product-card">
+                <a href="products/{{ product.id }}">
                     <img [src]="product.images" class="card-img-top" [alt]="product.name" />
-                    <div class="hover-overlay d-none position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
-                        <button class="btn btn-outline-dark me-2">
-                            <i class="fas fa-shopping-cart"></i> Cart
-                        </button>
-                        <button class="btn btn-outline-dark">
-                            <i class="fas fa-heart"></i> Wishlist
-                        </button>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">{{ product.name }}</h5>
-                        <p class="card-text">Rs. {{ product.price }}</p>
-                    </div>
+                </a>
+                <div
+                    class="hover-overlay d-none position-absolute top-0 start-0 w-100 h-100 d-flex justify-content-center align-items-center">
+                    <button class="btn btn-outline-dark me-2">
+                        <i class="fas fa-shopping-cart"></i> Cart
+                    </button>
+                    <button class="btn btn-outline-dark">
+                        <i class="fas fa-heart"></i> Wishlist
+                    </button>
                 </div>
-            </a>
+                <div class="card-body">
+                    <h5 class="card-title">{{ product.name }}</h5>
+                    <p class="card-text">Rs. {{ product.price }}</p>
+                    <p class="card-text">{{ product.description }}</p>
+
+                </div>
+            </div>
+
         </div>
     </div>
-    
+
 </div>
