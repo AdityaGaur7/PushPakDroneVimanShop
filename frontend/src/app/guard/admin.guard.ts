@@ -17,7 +17,7 @@ export class AdminGuard implements CanActivate {
     const loggedin = this.localStorageService.getItem('pushpakuserdata');  // Use the localStorage service to get the item
     if (loggedin) {
       const userdata = loggedin;
-      console.log(userdata);
+      // console.log(userdata);
       
       if (userdata && userdata) {
         // If the user is an admin, allow access to the route

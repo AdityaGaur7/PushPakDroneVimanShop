@@ -73,3 +73,9 @@
 .image-container:hover .overlay {
     opacity: 1; /* Shows the overlay on hover */
 }
+
+@media (max-width:720px) {
+    .image-container{
+        padding: 1rem;
+    }
+}

@@ -24,7 +24,7 @@ export class ProductService {
   private getHeaders(): HttpHeaders {
     const data = this.localStorageService.getItem<{ token: string }>('pushpakuserdata');
     const token = data ? data.token : '';
-    console.log(token);
+    // console.log(token);
     
     return new HttpHeaders({
       Authorization: `Bearer ${token}`

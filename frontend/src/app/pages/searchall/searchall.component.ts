@@ -44,7 +44,7 @@ export class SearchallComponent implements OnInit {
     this.productService.getProducts().subscribe(
       (data: Product[]) => {
         this.products = data;
-        console.log(this.products);
+        // console.log(this.products);
         
       },
       (error) => {

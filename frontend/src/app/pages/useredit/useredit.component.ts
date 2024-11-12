@@ -71,7 +71,7 @@ export class UsereditComponent implements OnInit {
           },
           () => {
             getDownloadURL(uploadTask.snapshot.ref).then(downloadURL => {
-              console.log('Image available at', downloadURL);
+              // console.log('Image available at', downloadURL);
               this.imageUrl = downloadURL;
               resolve(downloadURL);
             });
@@ -99,7 +99,7 @@ export class UsereditComponent implements OnInit {
       // Send the updated data to the backend
       this.userService.updateUser(this.userId, this.userForm.value).subscribe(
         response => {
-          console.log('User updated successfully', response);
+          // console.log('User updated successfully', response);
   
           // Update localStorage with the new user data
        

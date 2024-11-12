@@ -77,7 +77,7 @@ export class SignupComponent implements OnInit {
           },
           () => {
             getDownloadURL(uploadTask.snapshot.ref).then(downloadURL => {
-              console.log('Image available at', downloadURL);
+              // console.log('Image available at', downloadURL);
               this.imageUrl = downloadURL;
               resolve(downloadURL);
             });
@@ -103,7 +103,7 @@ export class SignupComponent implements OnInit {
       // Submit form data to the server
       this.authService.signUp(this.signupForm.value).subscribe(
         response => {
-          console.log('User signed up successfully!', response);
+          // console.log('User signed up successfully!', response);
           localStorage.setItem('pushpakuserdata', JSON.stringify(response));
           // this.router.navigate(['/']);
           window.location.href = '/';
