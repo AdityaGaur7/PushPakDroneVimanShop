@@ -46,7 +46,8 @@ export class LoginComponent implements OnInit {
         this.localStorageService.setItem('pushpakuserdata', JSON.stringify(response));
         
         // Navigate to home page after login
-        this.router.navigate(['/']);
+        // this.router.navigate(['/']);
+        window.location.href = '/';
       },
       error => {
         alert('Invalid credentials, please try again.');

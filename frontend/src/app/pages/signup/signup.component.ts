@@ -105,7 +105,8 @@ export class SignupComponent implements OnInit {
         response => {
           console.log('User signed up successfully!', response);
           localStorage.setItem('pushpakuserdata', JSON.stringify(response));
-          this.router.navigate(['/']);
+          // this.router.navigate(['/']);
+          window.location.href = '/';
         },
         error => {
           alert('Invalid credentials, try again');
